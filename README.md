@@ -92,7 +92,6 @@ audiobeaconandroid/
 │   ├── build.gradle.kts
 │
 └── README.md
-
 📱 How to Install the APK
 1. Download the APK
 
