@@ -1,213 +1,182 @@
 🎧 AudioBeacon — Enhancing Sound Awareness Through AI
-<div align="center">
-https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white
-https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white
-https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white
-https://img.shields.io/badge/Jetpack%2520Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white
 
-An intelligent Android application that assists individuals with hearing impairment by detecting environmental sounds in real-time
+A Final Year Project (2025) by Sarvesh Upasani, Diksha Wagh, Sneha Tambe & Tejas Sonawane
 
-*2025 Final Year Engineering Project • Award-Winning Innovation*
+🌟 Introduction
 
-</div>
-🌟 Overview
-AudioBeacon is a revolutionary Android application designed to bridge the awareness gap for deaf and hard-of-hearing individuals. Using advanced AI sound detection, the app identifies critical environmental sounds and provides instant haptic feedback, empowering users with greater independence and safety.
+AudioBeacon is an intelligent Android application built to assist individuals with hearing impairment by detecting environmental sounds in real time. Using TensorFlow Lite, the app listens to the surroundings, identifies sound events such as horns, alarms, sirens, and speech, and provides instant vibration feedback for important or emergency sounds.
 
-<div align="center">
-https://via.placeholder.com/400x800/1a1a2e/ffffff?text=AudioBeacon+UI+Preview
+This project was created in 2025 as the Final Year Engineering Project by
+Sarvesh Upasani, Diksha Wagh, Sneha Tambe, and Tejas Sonawane.
 
-"Technology that listens, so you don't have to"
+It received outstanding appreciation from college dignitaries, professors, and evaluators.
+The project was praised for its innovation, social impact, practical implementation, and excellent UI/UX design.
 
-</div>
-🎯 Project Vision
-Empowering the deaf and hard-of-hearing community through intelligent sound recognition technology, creating a safer and more accessible world.
+🎯 Project Goal
 
-🚀 Key Features
-🧠 AI-Powered Sound Detection
-Real-time Analysis: Continuous environmental monitoring using YAMNet (TensorFlow Lite)
+To build an AI-powered mobile assistant that helps deaf and hard-of-hearing individuals stay aware of important surrounding sounds, enhancing safety, awareness, and independence.
 
-Smart Classification: Identifies critical sounds including:
+🚀 Features
+🧠 Real-Time AI Sound Detection
 
-🚗 Vehicle horns & emergency sirens
+Uses YAMNet (TensorFlow Lite) model
 
-🚨 Alarms (fire, security, timer)
+Detects:
 
-🗣️ Speech & conversation
+Vehicle horns
 
-🌍 Environmental sounds
+Ambulance & emergency sirens
 
-📳 Intelligent Alerts
-Haptic Feedback: Automatic vibration patterns for different sound types
+Alarms
 
-Priority System: Emergency sounds trigger immediate alerts
+Speech
 
-Customizable Settings: Adjust sensitivity and vibration intensity
+Conversation
 
-🌓 Beautiful & Accessible UI
-Dark Theme: Easy on eyes with Material 3 design
+Environmental sounds
 
-Jetpack Compose: Modern, fluid user experience
+📳 Vibration Alerts
 
-Accessibility First: Designed specifically for hearing-impaired users
+The phone vibrates automatically when an important sound like a horn or emergency siren is detected.
 
-⚡ Performance Optimized
-Low Latency: Real-time processing with minimal delay
+🌓 Beautiful Dark Themed UI
 
-Battery Efficient: Optimized TensorFlow Lite model
+Designed using Jetpack Compose + Material 3
 
-Offline Capable: No internet connection required
+Clean, minimal, accessible, and user-friendly interface
 
-🏗️ Technical Architecture
+▶️ Start/Stop Listening
 
+Once the user taps START, the detection continues until STOP is pressed.
 
+📝 Inspirational Quote
 
+A motivational quote emphasizing empowerment for deaf individuals.
 
+👤 Credits Footer
 
+Displays developer names beautifully at the bottom.
 
+🔊 More Features Section
 
+(Optional future update screen)
 
-📱 Installation & Setup
-Prerequisites
-Android 8.0+ (API 26+)
+Audio-to-Text
 
-Microphone permission
+Text-to-Speech
 
-Minimum 2GB RAM recommended
-
-Quick Installation
-Download APK
-
-bash
-# Download the latest AudioBeacon.apk from releases
-Install on Device
-
-Enable "Install from unknown sources"
-
-Locate and tap the APK file
-
-Follow installation prompts
-
-First Time Setup
-
-Grant microphone permission when prompted
-
-Calibrate sensitivity if needed
-
-Tap START to begin detection
-
-Developer Setup
-bash
-# Clone the repository
-git clone https://github.com/audiobeacon/audiobeacon-android.git
-
-# Open in Android Studio
-# Sync Gradle dependencies
-# Build and run on device/emulator
-🛠️ Tech Stack
-Layer	Technology	Purpose
-UI	Jetpack Compose + Material 3	Modern, declarative UI framework
-Language	Kotlin	Official Android development language
-AI/ML	TensorFlow Lite + YAMNet	On-device sound classification
-Audio	Android AudioRecord API	Real-time microphone processing
-Concurrency	Kotlin Coroutines	Asynchronous sound processing
-Haptics	Vibrator API	Physical feedback system
-Architecture	MVVM Pattern	Clean, maintainable code structure
-📁 Project Structure
-text
-audiobeacon-android/
+🏗️ Tech Stack
+Technology	Purpose
+Kotlin	Main programming language
+Android Jetpack Compose (Material 3)	UI framework
+TensorFlow Lite (YAMNet)	Sound classification model
+Android AudioRecord API	Microphone recording
+Coroutines	Real-time sound stream processing
+Vibrator API	Alert mechanism
+📂 Folder Structure
+audiobeaconandroid/
+│
 ├── app/
-│   ├── src/main/java/com/audiobeacon/
-│   │   ├── ui/
-│   │   │   ├── MainActivity.kt
-│   │   │   ├── components/
-│   │   │   └── theme/
-│   │   ├── audio/
-│   │   │   ├── SoundClassifier.kt
-│   │   │   └── AudioRecorder.kt
-│   │   ├── domain/
-│   │   │   ├── models/
-│   │   │   └── repositories/
-│   │   └── utils/
-│   │       ├── Vibrator.kt
-│   │       └── Permissions.kt
+│   ├── src/main/java/com/example/audiobeconandroid/
+│   │   ├── MainActivity.kt
+│   │   ├── MoreFeaturesScreen.kt (optional)
 │   ├── src/main/assets/
 │   │   ├── yamnet.tflite
-│   │   └── labels.txt
+│   │   ├── labels.txt
 │   ├── src/main/res/
-│   │   ├── values/
-│   │   ├── drawable/
-│   │   └── mipmap/
-│   └── AndroidManifest.xml
-├── build.gradle.kts
+│   │   ├── drawable
+│   │   ├── layout
+│   │   ├── values
+│   │   ├── mipmap (App Icons)
+│   ├── AndroidManifest.xml
+│   ├── build.gradle.kts
+│
 └── README.md
-🎓 Recognition & Awards
-<div align="center">
-🏆 Best Final Year Project 2025
-⭐ Outstanding Innovation Award
-❤️ Social Impact Recognition
+📱 How to Install the APK
+1. Download the APK
 
-</div>
-"AudioBeacon represents the perfect blend of technical excellence and social responsibility. The team has created something truly meaningful."
-— Project Evaluator, 2025
+Copy the APK file (e.g., AudioBeacon.apk) to your Android device.
 
-👥 Our Amazing Team
-Role	Team Member	Contributions
-Lead Developer & AI	Sarvesh Upasani	TensorFlow integration, model optimization, core architecture
-UI/UX Designer	Diksha Wagh	Jetpack Compose design, user experience, documentation
-Research & Testing	Sneha Tambe	User testing, validation, research methodology
-Android Developer	Tejas Sonawane	Performance optimization, API integration, deployment
-🔮 Future Roadmap
-🎯 Short Term (2025)
-Flashlight alerts for emergency sounds
+2. Install
 
-Custom vibration patterns
+Open the file → Allow installation from unknown sources → Tap Install.
 
-Background detection mode
+3. Use the App
 
-🚀 Medium Term (2026)
-Bluetooth wearable integration
+Open AudioBeacon
 
-Multi-language support
+Tap START to begin real-time sound detection
 
-Cloud sync for settings
+The screen shows detection results
 
-🌟 Long Term Vision
-Home automation integration
+Vibration automatically triggers on emergency sounds
 
-Smartwatch companion app
+Tap STOP to end detection
 
-Global sound database
+🛠️ How to Run the Project in Android Studio
+Step 1 — Open
 
-🤝 Contributing
-We welcome contributions from the community! Please check our Contributing Guidelines and help us make AudioBeacon even better.
+Launch Android Studio
 
-Development Setup
-kotlin
-// Required dependencies
-dependencies {
-    implementation("org.tensorflow:tensorflow-lite:2.13.0")
-    implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-}
+Choose Open Existing Project
+
+Select the audiobeconandroid folder
+
+Step 2 — Sync Gradle
+
+Gradle syncs automatically.
+Wait for dependencies to download.
+
+Step 3 — Run
+
+Connect a physical Android device
+OR
+
+Create a virtual device (Emulator)
+
+Press Run ▶
+
+Step 4 — Permissions
+
+Grant microphone permission when prompted.
+
+🎓 Project Achievements
+
+Selected as one of the best final-year projects of 2025
+
+Appreciated by college dignitaries, staff, and evaluators
+
+Recognized for:
+✔ Social impact
+✔ Strong execution
+✔ Real-world usefulness
+✔ High-quality UI
+✔ Use of AI/ML in mobile applications
+
+🤝 Team Members
+Name	Role
+Sarvesh Upasani	Lead Developer & AI Integration
+Diksha Wagh	UI/UX & Documentation
+Sneha Tambe	Research & Testing
+Tejas Sonawane	Android Development & Optimization
+💡 Future Enhancements
+
+🔊 Flashlight alert for emergency sounds
+
+📡 Bluetooth wearable integration
+
+🌍 Offline language translation
+
+🎥 Visual waveform representation
+
+🔕 Silent-mode override alerts
+
 📜 License
-text
-MIT License
 
-Copyright (c) 2025 AudioBeacon Team
+This project is created for educational and social good purposes.
+Feel free to use or modify with proper credit.
 
-Permission is hereby granted to use, modify, and distribute this project
-for educational and social good purposes with proper attribution.
-🌍 Impact & Vision
-<div align="center">
-💡 466 million people worldwide have disabling hearing loss
-📱 AudioBeacon aims to make technology accessible to all
-</div>
-<div align="center">
-❤️ Built with Purpose
-"Innovation is not just about building technology; it's about building better lives."
+❤️ Final Note
 
-AudioBeacon Team 2025 • Making the world more accessible, one sound at a time.
-
-https://via.placeholder.com/200x60/000000/ffffff?text=Coming+Soon+on+Play+Store
-
-</div>
+AudioBeacon showcases how technology, empathy, and innovation can come together to solve real-world problems.
+Built with love, hard work, and purpose — 2025 Final Year Engineering Project.
